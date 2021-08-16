@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Login
+    </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Noto+Sans+JP:wght@300&display=swap');
+    </style>
+    <div class="heading-1">
+    <h1>
+        Login
+    </h1>
+    </div>
+<link rel="stylesheet" href="/Styles.css">
+</head>
+
+<body>
+<div class="login">
+
+<form method="POST" action="/users/login">
+    
+    <!-- <div>
+    <label for="f-name">First Name:</label>
+    <br>
+    <input name="f-name" type="text" class="input-login" placeholder="Enter your First Name" size="100%" required></input>
+    </div>
+
+    <div>
+    <label for="l-name">Last Name:</label>
+    <br>
+    <input name="l-name" type="text" class="input-login" placeholder="Enter your Last Name"></input>
+    </div> -->
+
+    <div>
+    <label for="email">Email Id:</label>
+    <br>
+    <input name="email" type="email" class="input-login" placeholder="Enter your Email Id"></input>
+    </div>
+
+    <!-- <div>
+    <label for="role">Choose your role</label>
+    <br>
+    <select name="role" class="input-login">
+        <option style="color:red" value="null" disabled selected>Select your Role</option>
+        <option value="Teacher">Teacher</option>
+        <option value="Student">Student</option>
+    </select>
+    </div> -->
+
+    <div>
+    <label for="password">Password:</label>
+    <br>
+    <input name="password" class="input-login" placeholder="Enter your Password"></input>
+    </div>
+
+    <!-- <div>
+    <label for="re-password">Confirm Password:</label>
+    <br>
+    <input name="re-password" class="input-login" placeholder="Re-Enter your Password"></input>
+    </div>
+ -->
+    <button class="btn-1" type="submit">Login</button>
+    </div>
+</form>
+</div>
+
+<div class="bottom-login">
+    <div class="inline-block">
+        <p>Don't have an account?</p>
+    </div>
+        <a href="/users/register"> Register</a>
+</div>
+
+</body>
+
+</html>

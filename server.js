@@ -11,9 +11,10 @@ app.use(express.static("Styles"));
 mongoose.connect(database,{useNewUrlParser:true,useUnifiedTopology:true})
     .then(result=>
     {
-        app.listen(3000);
+        app.listen(5000);
         console.log("Listening on Port 3000");
     })
     .catch((err)=>console.log(err))
 app.get("/",(req,res)=>{res.redirect("/users/register")});
 app.get("/users/register",(req,res)=>{res.render("register")});
+app.get("/users/login",(req,res)=>{res.render("login")});
