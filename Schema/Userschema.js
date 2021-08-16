@@ -17,11 +17,6 @@ const usersSchema=new Schema(
         type:String,
         required:true
     },
-    role:
-    {
-        type:String,
-        required:true,
-    }
 },{timestamps:true});
 const user=mongoose.model("User",usersSchema);
 module.exports=user;
