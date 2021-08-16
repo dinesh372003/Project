@@ -23,31 +23,34 @@
     <div>
     <label for="fname">First Name:</label>
     <br>
-    <input name="fname" type="text" class="input-login" placeholder="Enter your First Name" required></input>
+    <input name="fname" type="text" class="input-login" placeholder="Enter your First Name" 
+    value="<%=typeof fname != 'undefined'?fname:''%>"required></input>
     </div>
 
     <div>
     <label for="lname">Last Name:</label>
     <br>
-    <input name="lname" type="text" class="input-login" placeholder="Enter your Last Name"></input>
+    <input name="lname" type="text" class="input-login" placeholder="Enter your Last Name"
+    value="<%=typeof lname != 'undefined'?lname:''%>"></input>
     </div>
 
     <div>
     <label for="email">Email Id:</label>
     <br>
-    <input name="email" type="email" class="input-login" placeholder="Enter your Email Id"></input>
+    <input name="email" type="email" class="input-login" placeholder="Enter your Email Id" 
+    value="<%=typeof email != 'undefined'?email:''%>"required></input>
     </div>
 
     <div>
     <label for="password">Password:</label>
     <br>
-    <input name="password" class="input-login" placeholder="Enter your Password"></input>
+    <input name="password" type="password" class="input-login" placeholder="Enter your Password"></input>
     </div>
 
     <div>
     <label for="repassword">Confirm Password:</label>
     <br>
-    <input name="repassword" class="input-login" placeholder="Re-Enter your Password"></input>
+    <input name="repassword" type="password" class="input-login" placeholder="Re-Enter your Password"></input>
     </div>
 
     <button class="btn-1" type="submit">Register</button>
