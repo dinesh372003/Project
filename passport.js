@@ -13,7 +13,6 @@ new LocalStrategy({ passReqToCallback: true ,usernameField:"email",passwordField
     {
         if (!user) 
         {
-            console.log("1");
             return done(null, false, req.flash("error-login","The email is not registered"));
         }
         bcrypt.compare(password, user.password, (err,isMatch)=> 
@@ -21,13 +20,11 @@ new LocalStrategy({ passReqToCallback: true ,usernameField:"email",passwordField
             if (err) console.log(err);
             if (isMatch) 
             {
-                console.log("3");
                 return done(null, user);
             } 
             else 
             {
                 console.log(password,user.password);
-                console.log("2");
                 return done(null, false, req.flash("error-login","Incorrect Password"));
             }
         });
