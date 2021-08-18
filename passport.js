@@ -5,20 +5,26 @@ const User = require('./Schema/Userschema');
 module.exports = function(passport) {
 passport.use(
 new LocalStrategy({ passReqToCallback: true ,usernameField:"email",passwordField:"password" },
-(req,email, password, done)=> 
+(req,email,password, done)=> 
 {
     //Finding Match for User
     User.findOne({email:email})
     .then(user=> 
     {
+        //if no User
         if (!user) 
         {
             return done(null, false, req.flash("error-login","The email is not registered"));
         }
-        bcrypt.compare(password, user.password, (err,isMatch)=> 
+
+        //Comparing Passwords
+        bcrypt.compare(password,user.password,(err,isMatch)=> 
         {
-            if (err) console.log(err);
-            if (isMatch) 
+            if(err) 
+            {
+                console.log(err);
+            }
+            if(isMatch) 
             {
                 return done(null, user);
             } 
