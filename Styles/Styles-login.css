@@ -1,0 +1,156 @@
+.container
+{
+    font-size: 4vh;
+    position:absolute;
+    display: inline-block;
+    left:10%;
+    width:80%;
+    height: 80%;
+    top: 10%;
+    bottom:10%;
+    border-radius: 5vh;
+    box-shadow: 10px 5px 5px black;
+    margin:0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: white;
+}
+.heading-1
+{
+    font-family: 'Noto Sans JP', 'sans-serif';
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Lato', 'sans-serif';
+}
+.login
+{
+    padding-top: 3vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    padding-bottom: 6vh ;
+    border:0.75vh solid brown;
+    border-radius: 1vh;
+    font-family: 'Noto Sans JP', 'sans-serif';
+    margin-left:35%;
+    margin-right:35%;
+    font-size: 3.75vh;
+}
+.input-login
+{
+    position: relative;
+    font-size:2.25vh;
+    width:20vw;
+    height: 5vh;
+    left:1vw;
+    border-radius: 0.5vh;
+    border-top:0;
+    border-left:0;
+    border-right:0;
+    border-bottom:0.5vh solid #a855ec;
+}
+.input-login:focus
+{
+    outline-width: 0;
+    border-bottom:0.8vh solid #558aec;
+}
+.btn-1
+{
+    position: relative;
+    height: 5vh;
+    width:10vw;
+    font-size: 3vh;
+    border-radius: 1vh;
+    border:0;
+    color:white;
+    background-color: #6D63FF;
+    margin-bottom: 5vh;
+}
+.btn-1:hover
+{
+    background-color: #a855ec;
+    transition: 0.5s;
+    box-shadow: 0.5vh 0.5vh 0.5vh black;
+
+}
+.login-container
+{
+    position: absolute;
+    right:0;
+    display: inline-block;
+    height: 100%;
+    overflow-y:scroll;
+    overflow-x: hidden;
+    
+    min-width: 40%;
+    /* display: flex; */
+    /* flex-direction: column;
+    justify-content: center; */
+}
+.login-container::-webkit-scrollbar {
+    display: none;
+  }
+.bottom-login
+{
+    position: relative;
+    font-family: 'Noto Sans JP', 'sans-serif';
+    text-align: center;
+    text-decoration: none;
+    font-size: 2vw;
+}
+.intro-img
+{
+    position: absolute;
+    left:5vh;
+    /* border:2px solid red; */
+    width:60%;
+    height:100%;
+    display: flex;
+    overflow: hidden;
+}
+.inline-block
+{
+    display: inline-block;
+}
+::placeholder
+{
+    color:rgb(139, 138, 138);
+}
+
+@media screen and (max-width:1024px)
+{
+    .intro-img
+    {
+        /* height:0; */
+        width:50%;
+    }
+    .input-login
+    {
+        width: 75%;
+    }
+    .btn-1
+    {
+        width:15vw;
+    }
+    .login-container
+{
+    width:50%;
+}
+
+}
+@media screen and (max-width:600px)
+{
+.intro-img
+{
+    height:0;
+    width:0;
+}
+.login-container
+{
+    left:5vw;
+    width: 100%;
+    
+}
+.btn-1
+{
+    width: 80%;
+}
+}
