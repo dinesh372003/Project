@@ -1,0 +1,152 @@
+body
+{
+    width: 100vw;
+    height: 100vh;
+}
+.flex-container {
+    align-items: center;
+    display: flex;
+    font-size: 30px;
+    text-align: center;
+    padding-left: 2vw;
+    background-color: #6D63FF;
+    height: 15vh;
+  }
+  
+  .flex-item-button {
+    flex: 10%;
+    width:2px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: rgb(236, 255, 205);
+  }
+  
+  .flex-item-head {
+    flex: 80%;
+    color:red;
+    margin-bottom: 0;
+    font-size:7.5vh;
+}
+  .flex-item-end{
+    flex: 10%;
+    text-decoration: none;
+    color:white
+  }
+  .vertical-nav {
+    min-width: 17rem;
+    width: 17rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+#content
+{
+    width: calc(100% - 17rem);
+    margin-left: 17rem;
+    transition: all 0.4s;
+}
+#sidebar.active {
+  margin-left: -17rem;
+}
+
+#content.active {
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.text-gray {
+  color: #aaa;
+}
+.nav-link{
+    text-transform: capitalize;
+}
+.nav-link:hover{
+    background:#f3f2f2;
+}
+.text-primary{
+    color:#7579e7 !important;
+}
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -17rem;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #content {
+    width: 100%;
+    margin: 0;
+  }
+  #content.active {
+    margin-left: 17rem;
+    width: calc(100% - 17rem);
+  }
+}
+
+
+
+
+.sidebar
+{
+    width:20vw;
+    height:100vh;
+    background-color: #6D63FF;
+    margin-left: 0;
+    top:0;
+    padding-left:0;
+    margin-right:0;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 3vw;
+    padding-left: 2vw;
+}
+.container-fluid
+{
+    left:0;
+    margin-left: 0;
+    padding-left: 0;
+}
+@media screen and (max-width:784px)
+
+{
+    .sidebar
+    {
+        width:0;
+        left:-500px;
+    }
+}
+
+/* #collapseExample
+{
+    position: relative;
+    top:1vh;
+} */
+
+
+
+
+/* .navbar
+{
+    width:25vw;
+    left:-30vw;
+    height: 100vh;
+    position: fixed;
+    background-color: #6D63FF;
+}
+.nav-link
+{
+    font-size: 1.25em;
+}
+.active-nav
+{
+    margin-left:0;
+}
+.active-cont
+{
+    margin-left:25vw;
+} */
