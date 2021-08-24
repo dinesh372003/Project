@@ -30,6 +30,21 @@
     
     <ul class="nav flex-column mb-0">
       <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
+        <div class="accordion" id="accordionExample">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingClass">
+              <button class="accordion-button bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseClass" aria-expanded="true" aria-controls="collapseClass">
+                <h5><strong><i class="bi bi-collection-fill"></i> Classes</strong></h5>
+              </button>
+            </h2>
+            <div id="collapseClass" class="accordion-collapse collapse show" aria-labelledby="headingClass" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+              </div>
+            </div>
+          </div>
+
         <div class="accordion-item">
           <h1 class="accordion-header" id="panelsStayOpen-headingOne">
             <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
@@ -42,6 +57,7 @@
             </div>
           </div>
         </div>
+
         <div class="accordion-item">
           <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
             <button class="accordion-button collapsed bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
@@ -67,7 +83,11 @@
           </div>
         </div>
       </div>  
-    </ul>
+
+      <div class="fs-5 fw-bold mt-5 py-2 px-3 bg-light jkl">
+        <a href="/users/logout" style="text-decoration:none; color:black"><i class="bi bi-box-arrow-in-right fa-lg"></i> Logout</a>
+      </div>
+      </ul>
 </div>
 
 
@@ -76,5 +96,16 @@
     <!-- Toggle button -->
     <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
     <p class="fw-bold  flex-item-head">School</p>
-    <a href="/users/logout" class= "fs-5 flex-item-end" >Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+    <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
   </div>
+  <style>
+    .jkl
+    {
+      width=100%;
+      text-decoration:none; color:black;
+    } 
+    .jkl:hover
+    {
+      color:blue;
+    }
+  </style>
