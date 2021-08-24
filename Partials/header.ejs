@@ -29,6 +29,11 @@
     
     
     <ul class="nav flex-column mb-0">
+      <div class="fs-4 fw-bold py-2 px-3 mb-3 bg-light jkl">
+        <a href="/" class="jk"><i class="fas fa-home"></i>
+          Dashboard</a>
+      </div>
+
       <div class="accordion bg-light" id="accordionPanelsStayOpenExample">
         <div class="accordion" id="accordionExample">
 
@@ -40,7 +45,7 @@
             </h2>
             <div id="collapseClass" class="accordion-collapse collapse show" aria-labelledby="headingClass" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
+                  <!-- <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow. -->
               </div>
             </div>
           </div>
@@ -84,28 +89,26 @@
         </div>
       </div>  
 
-      <div class="fs-5 fw-bold mt-5 py-2 px-3 bg-light jkl">
-        <a href="/users/logout" style="text-decoration:none; color:black"><i class="bi bi-box-arrow-in-right fa-lg"></i> Logout</a>
-      </div>
       </ul>
+      <div class="fs-5 fw-bold mt-5 py-2 px-3 bg-light jkl">
+        <a href="/users/logout" class="jk"><i class="bi bi-box-arrow-in-right fa-lg"></i> Logout</a>
+      </div>
+
 </div>
 
+<style>
+  .jkl
+  {
+    width:100%;
+  } 
+  .jk
+  {
+    text-decoration: none;
+    color: black;
+  }
+  .jk.jkl:hover
+  {
+    color:#6D63FF;
+  }
+</style>    
 
-<div class="content" id="content" >
-  <div class="flex-container"style="display: flex;">
-    <!-- Toggle button -->
-    <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
-    <p class="fw-bold  flex-item-head">School</p>
-    <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
-  </div>
-  <style>
-    .jkl
-    {
-      width=100%;
-      text-decoration:none; color:black;
-    } 
-    .jkl:hover
-    {
-      color:blue;
-    }
-  </style>
