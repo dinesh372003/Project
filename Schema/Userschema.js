@@ -2,12 +2,16 @@ const mongoose=require("mongoose");
 const Schema=mongoose.Schema;
 const usersSchema=new Schema(
 {
-    email:
+    fname:
     {
         type:String,
         required:true,
     },
-    name:
+    lname:
+    {
+        type:String,
+    },
+    email:
     {
         type:String,
         required:true,
