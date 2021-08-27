@@ -24,7 +24,11 @@ const usersSchema=new Schema(
     classes:
     {
         type:[String],
-    }
+    },
+    classname:
+    {
+        type:[String],
+    },
 },{timestamps:true});
 const user=mongoose.model("User",usersSchema);
 module.exports=user;
