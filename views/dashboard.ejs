@@ -1,0 +1,53 @@
+<%-include("../Partials/header")%>  
+<div class="content" id="content" >
+  <div class="flex-container"style="display: flex;">
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
+    <p class="fw-bold  flex-item-head">School</p>
+    <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+  </div>
+    
+   <!-- Page content holder -->
+      <div class="wrapper">
+        <%User.classname.forEach(function(classname){%>
+          <div class="grids"><%=classname%></div>
+        <%})%>
+        <div class="grids">
+          <div class="dropdown">
+            <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-plus-lg fa-3x"></i>
+            </button>
+          <ul class="dropdown-menu" style="color: red;" aria-labelledby="dropdownMenuButton1">
+          <li><a class="dropdown-item" href="/newclass">Create Class</a></li>
+          <li><a class="dropdown-item" href="/joinclass">Join Class</a></li>
+          
+            <!-- <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- <div class="row">
+        <div class="col bg-white m-5 ">col</div>
+        <div class="col bg-light m-5">col</div>
+        <div class="col bg-light m-5">col</div>
+      </div> -->
+    </div>
+
+<!--Js Script-->
+<script>
+  $(function() 
+{ 
+$('#sidebarCollapse').on('click', function() 
+{
+  $('#sidebar, #content').toggleClass('active');
+});
+});
+
+</script>
+
+</body>
+</html>
+

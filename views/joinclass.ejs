@@ -1,0 +1,33 @@
+<%-include("../Partials/header")%>  
+<div class="content" id="content" >
+  <div class="flex-container"style="display: flex;">
+    <!-- Toggle button -->
+    <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
+    <p class="fw-bold  flex-item-head">School</p>
+    <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+  </div>
+
+<div class="fs-1 sdf">
+    EFGH
+</div>
+</div>
+<style>
+    .sdf
+    {
+        margin-left: 20%;
+        width:60%;
+    }
+</style>
+<script>
+  $(function() 
+{ 
+$('#sidebarCollapse').on('click', function() 
+{
+  $('#sidebar, #content').toggleClass('active');
+});
+});
+
+</script>
+
+</body>
+</html>

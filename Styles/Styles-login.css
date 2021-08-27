@@ -1,9 +1,11 @@
 .container
 {
-    font-size: 4vh;
-    position:absolute;
+    font-size:calc(1rem + 0.75vw);
+    position:fixed;
     display: inline-block;
     left:10%;
+    right:10%;
+    /* margin-right:10%; */
     width:80%;
     height: 80%;
     top: 10%;
@@ -14,6 +16,10 @@
     padding: 0 0 0 0;
     background-color: white;
 }
+.name
+{
+    font-size:100%;
+}
 .heading-1
 {
     font-family: 'Noto Sans JP', 'sans-serif';
@@ -21,7 +27,7 @@
     font-size: 2vw;
     font-family: 'Lato', 'sans-serif';
 }
-.login
+/* .login
 {
     padding-top: 3vh;
     padding-left: 3vh;
@@ -32,12 +38,12 @@
     font-family: 'Noto Sans JP', 'sans-serif';
     margin-left:35%;
     margin-right:35%;
-    font-size: 3.75vh;
-}
+    font-size: 25vw;
+} */
 .input-login
 {
     position: relative;
-    font-size:2.25vh;
+    font-size:calc(0.75rem + 0.6vw);
     width:20vw;
     height: 5vh;
     left:1vw;
@@ -57,7 +63,7 @@
     position: relative;
     height: 5vh;
     width:10vw;
-    font-size: 3vh;
+    font-size: calc(0.75rem + 0.5vw);
     border-radius: 1vh;
     border:0;
     color:white;
@@ -79,15 +85,12 @@
     height: 100%;
     overflow-y:scroll;
     overflow-x: hidden;
-    
     min-width: 40%;
-    /* display: flex; */
-    /* flex-direction: column;
-    justify-content: center; */
 }
-.login-container::-webkit-scrollbar {
+.login-container::-webkit-scrollbar 
+{
     display: none;
-  }
+}
 .bottom-login
 {
     position: relative;
@@ -119,7 +122,6 @@
 {
     .intro-img
     {
-        /* height:0; */
         width:50%;
     }
     .input-login
@@ -131,10 +133,10 @@
         width:15vw;
     }
     .login-container
-{
-    width:50%;
-}
-
+    {
+        width:50%;
+        overflow-x: auto;
+    }
 }
 @media screen and (max-width:600px)
 {
@@ -143,11 +145,46 @@
     height:0;
     width:0;
 }
+.container
+{
+    left:0.5vw;
+    right:0.5vw;
+    /* left:2%; */
+    min-width: 80%;
+    /* right:2%; */
+}
 .login-container
 {
     left:5vw;
     width: 100%;
-    
+    overflow-x: auto;    
+}
+.btn-1
+{
+    width: 80%;
+}
+}
+
+@media screen and (max-width:575px)
+{
+.intro-img
+{
+    height:0;
+    width:0;
+}
+.container
+{
+    left:0.5vw;
+    right:0.5vw;
+    /* left:2%; */
+    min-width: 80%;
+    /* right:2%; */
+}
+.login-container
+{
+    left:5vw;
+    width: 100%;
+    overflow-x: auto;    
 }
 .btn-1
 {
