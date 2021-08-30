@@ -9,9 +9,11 @@
     
    <!-- Page content holder -->
       <div class="wrapper">
-        <%User.classname.forEach(function(classname){%>
-          <div class="grids"><%=classname%></div>
-        <%})%>
+
+        <%for(var i=1;i<=User.classname.length;i++){%>
+          <div class="grids"><a href="/<%-User.classes[i-1]%>"><%=User.classname[i-1]%></a></div>
+        <%}%>
+
         <div class="grids">
           <div class="dropdown">
             <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
