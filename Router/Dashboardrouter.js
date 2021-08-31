@@ -1,36 +1,15 @@
 const express=require("express");
 const router=express.Router();
 const dashcont=require("../Controlller/Dashboardcontroller");
-const Class = require("../Schema/Classschema");
-//Get request
 
-    //Rendering dashboard
-    router.get("/",dashcont.dashboard);
+router.get("/",dashcont.dashboard);
 
-    //Rendering new class page
-    router.get("/newclass",(req,res)=>
-    {
-        res.render("newclass",{User:req.user,title:"New Class"});
-    });
+router.get("/newclass",dashcont.newclass);
 
-    //Rendering join class page
-    router.get("/joinclass",(req,res)=>
-    {
-        res.render("joinclass",{User:req.user,title:"Join Class"});
-    });
+router.get("/joinclass",dashcont.joinclass);
 
-    //Rendering class page
-    router.get("/:id",(req,res)=>
-    {
-        const id=req.params.id;
-        Class.findById(id)
-        .then(result=>
-            res.render("class",{User:req.user,title:result.classname,Class:result})
-        )
-        .catch(err=>console.log(err));
-    })
+router.get("/:id",dashcont.clas)
 
-//Post Request
-    //Getting new class post request
-    router.post("/newclass",dashcont.newclass);
+router.post("/newclass",dashcont.newclasspost);
+
 module.exports=router;
