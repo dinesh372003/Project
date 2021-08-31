@@ -1,8 +1,42 @@
-<!Doctype html>
-<head>
+<%-include("../Partials/header")%>
 
-</head>
-<body>
+<div class="content" id="content" >
+    <div class="flex-container"style="display: flex;">
+      <!-- Toggle button -->
+      <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
+      <div class="flex-item-text ms-2 fw-bold fs-0" style="">
+            <%if(Class.classname.length<=10){%>
+            <%=Class.classname%>
+            <%}%>
+            <%if(Class.classname.length>10){%>
+                <%for(i=0;i<=10;i++){%>
+                    <%=Class.classname[i]%>
+                <%}%>...
+            <%}%>
+        </div>
+      <p class="fw-bold fs-0 flex-item-head" style="color: gold;"></p>
+      <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+    </div>
 
+</div>  
+
+<script>
+    $(function() 
+  { 
+  $('#sidebarCollapse').on('click', function() 
+  {
+    $('#sidebar, #content,.flex-container').toggleClass('active');
+  });
+  });
+</script>
+<style>
+.flex-item-text
+{ 
+    height:100%;
+    color:gold;
+    background-color:#6D63FF;
+    max-width:30vw;
+}
+</style>
 </body>
 </html>
