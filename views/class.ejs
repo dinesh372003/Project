@@ -1,11 +1,14 @@
 <%-include("../Partials/header")%>
 
 <div class="content" id="content" >
+  <!--Header-->
     <div class="flex-container"style="display: flex;">
       <!-- Toggle button -->
       <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
       <div class="flex-item-text ms-2 fw-bold fs-0">
-            <%if(Class.classname.length<=10){%>
+        
+        <!--Checking for the Length of the class name-->   
+        <%if(Class.classname.length<=10){%>
             <%=Class.classname%>
             <%}%>
             <%if(Class.classname.length>10){%>
@@ -14,10 +17,20 @@
                 <%}%>...
             <%}%>
         </div>
-      <p class="fw-bold fs-0 flex-item-head" style="color: gold;"></p>
-      <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
-    </div>
+      <a href="/<%-Class._id%>/people" class="fw-bold fs-5 flex-item-middle" id="people" style="color: greenyellow;">People</a>
+      <a href="/<%-Class._id%>/Timetable" class="fw-bold fs-5 flex-item-middle" style="color: greenyellow;">Timetable</a>
+      <a href="/<%-Class._id%>/Assignment" class="fw-bold fs-5 flex-item-middle" style="color: greenyellow;">Assignment</a>
+      <a href="/<%-Class._id%>/Result" class="fw-bold fs-5 flex-item-middle" style="color: greenyellow;">Result</a>
 
+      <a href="/users/logout" class= "fs-5 flex-item-end me-2">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+    </div>
+<!--/Header-->
+
+<!--Middle-->
+<div class="middle">
+    
+</div>
+<!--/Middle-->
 </div>  
 
 <script>
@@ -35,7 +48,7 @@
     height:100%;
     color:gold;
     background-color:#6D63FF;
-    max-width:30vw;
+    max-width:30%;
 }
 </style>
 </body>

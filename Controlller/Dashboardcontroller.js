@@ -20,11 +20,29 @@ const joinclass=(req,res)=>
 const clas=(req,res)=>
 {
     const id=req.params.id;
-    Class.findById(id)
-    .then(result=>
-        res.render("class",{User:req.user,title:result.classname,Class:result})
-    )
-    .catch(err=>console.log(err));
+    const User=req.user;
+    var flag=0;
+    User.classes.forEach(function(classid)
+    {
+        if(classid==id)
+        {
+            flag=1;
+            Class.findById(id)
+            .then(result=>
+                res.render("class",
+                {
+                    User:req.user,
+                    title:result.classname,
+                    Class:result
+                })
+            )
+            .catch(err=>console.log(err));
+        }
+    })
+    if(flag==0)
+    {
+        res.render("404");
+    }
 };
 
 const newclasspost=(req,res)=>

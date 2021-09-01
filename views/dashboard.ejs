@@ -4,14 +4,17 @@
     <!-- Toggle button -->
     <button id="sidebarCollapse" type="button" class="btn flex-item-button"><i class="fa fa-bars mr-2 a"></i></button>
     <p class="fw-bold  flex-item-head">School</p>
-    <a href="/users/logout" class= "fs-5 flex-item-end">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
+    <a href="/users/logout" class= "fs-5 flex-item-end me-2">Logout<i class="bi bi-box-arrow-in-right fa-lg"></i></a>
   </div>
     
    <!-- Page content holder -->
+   <div class="middle">
       <div class="wrapper">
 
         <%for(var i=1;i<=User.classname.length;i++){%>
-          <div class="grids"><a href="/<%-User.classes[i-1]%>" style="text-decoration: none;color: black;"><%=User.classname[i-1]%></a></div>
+          <div class="grids"><a href="/<%-User.classes[i-1]%>" style="text-decoration: none;color: black;">
+            <%=User.classname[i-1]%>
+          </a></div>
         <%}%>
 
         <div class="grids">
@@ -20,8 +23,14 @@
               <i class="bi bi-plus-lg fa-3x"></i>
             </button>
           <ul class="dropdown-menu" style="color: red;" aria-labelledby="dropdownMenuButton1">
-          <li><a class="dropdown-item" href="/newclass">Create Class</a></li>
-          <li><a class="dropdown-item" href="/joinclass">Join Class</a></li>
+          
+            <li><a class="dropdown-item" href="/newclass">
+            Create Class
+          </a></li>
+
+          <li><a class="dropdown-item" href="/joinclass">
+            Join Class
+          </a></li>
           
             <!-- <li><a class="dropdown-item" href="#">Action</a></li>
           <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -37,7 +46,7 @@
         <div class="col bg-light m-5">col</div>
       </div> -->
     </div>
-
+  </div>
 <!--Js Script-->
 <script>
   $(function() 

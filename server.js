@@ -42,3 +42,7 @@ app.use(flash());
 //Directing to different pages
 app.use("/users",router);
 app.use("/",ensureAuthenticated,routers);
+
+app.get('*', (req, res) => {
+    res.status(404).render('404')
+})

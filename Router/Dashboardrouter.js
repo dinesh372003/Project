@@ -4,12 +4,11 @@ const dashcont=require("../Controlller/Dashboardcontroller");
 
 router.get("/",dashcont.dashboard);
 
-router.get("/newclass",dashcont.newclass);
+router.route("/newclass")
+.get(dashcont.newclass)
+.post(dashcont.newclasspost)
 
 router.get("/joinclass",dashcont.joinclass);
 
 router.get("/:id",dashcont.clas)
-
-router.post("/newclass",dashcont.newclasspost);
-
 module.exports=router;
