@@ -13,18 +13,18 @@ body
 }
 .flex-container 
 {
-    position: fixed;
-    top:0;
-    right: 0;
-    left:17rem;
-    align-items: center;
-    display: flex;
-    font-size: 30px;
-    text-align: center;
-    padding-left: 2vw;
-    background-color: #6D63FF;
-    min-height: 15vh;
-    transition: 0.4s;
+  position: fixed;
+  top:0;
+  right: 0;
+  left:17rem;
+  align-items: center;
+  display: flex;
+  font-size: 30px;
+  text-align: center;
+  padding-left: 2vw;
+  background-color: #6D63FF;
+  min-height: 15px;
+  transition: 0.4s;
 }
 .flex-container.active
 {
@@ -60,8 +60,6 @@ body
   color:black ;
   transition: 0.4s;
 }
-
-
 .flex-item-middle
 {
     flex: 15%;
@@ -82,8 +80,6 @@ body
     position: fixed;
     top: 0;
     left: 0;
-    border-right: 0.2px solid rgb(68, 67, 67);
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.4s;
 }
 #content

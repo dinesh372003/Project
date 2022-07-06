@@ -10,6 +10,7 @@ const {ensureAuthenticated}=require("./auth.js");
 const flash = require('connect-flash');
 const passport=require("passport");
 const bodyParser=require("body-parser");
+const path=require('path');
 require("./passport")(passport);   
 require("dotenv").config();
 const{PORT,MONGODB_USERNAME,MONGODB_PASSWORD}=process.env;
@@ -42,7 +43,6 @@ app.use(flash());
 //Directing to different pages
 app.use("/users",router);
 app.use("/",ensureAuthenticated,routers);
-
 app.get('*', (req, res) => {
     res.status(404).render('404')
 })
